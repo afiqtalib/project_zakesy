@@ -19,7 +19,7 @@
 </head>
 
 
-<body class="bg-gradient-primary">
+<body class="bg-login">
     <!-- Start Container -->
     <div class="container">
         <!-- START Outer Row -->

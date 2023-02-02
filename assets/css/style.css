@@ -4,8 +4,13 @@
 body {
     margin: 0;
     width: 100%;
-    background: linear-gradient(300deg, rgba(49,121,231,1) 10%, rgba(49,121,231,1) 100%);
+    /* background: linear-gradient(300deg, rgba(49,121,231,1) 10%, rgba(49,121,231,1) 100%); */
     font-family: 'Itim', cursive;
+}
+
+.bg-login {
+    /* background: linear-gradient(300deg, rgba(49,121,231,1) 10%, rgba(49,121,231,1) 100%); */
+    background: #F0F8FF;
 }
 
 .register
@@ -35,12 +40,50 @@ body {
     border-radius: 15px;
 }
 
-/*  */
-.bg-login {
-    background-image: url('assets/image/doc.jpg');
-    background-position: center;
-    /* background-size:contain; */
-        background-size:cover;
 
-    width: fit-content;
+/*
+    ======================================
+    
+    ADMIN PAGE STYLE
+
+    ========================================
+*/
+
+.bg-page {
+    background: #EEEEEE;
+}
+
+
+/*
+    ======================================
+    
+    DASHBOARD PAGE STYLE
+
+    ========================================
+*/
+
+
+.tab button.active 
+{
+    color: #fff;
+    border-bottom: 4px solid #ffd943;
+}
+
+.tab button 
+{
+    background: inherit;
+    color: #ffffff9c;
+    float: left;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+    border-bottom: 4px solid transparent;
+}
+
+.tabcontent 
+{
+    display: none;
 }

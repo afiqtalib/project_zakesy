@@ -55,9 +55,10 @@ class Admin extends CI_Controller {
                                         );
                     $this->session->set_userdata($session_data);
                     $this->session->set_flashdata("success", "");
+                    $this->load->view('admin_v_home');
 
                     // echo "<script type='text/javascript'>alert('Successfuly BOSSS.');</script>"; 
-                    redirect("admin", "refresh");
+                    // redirect("admin", "refresh");
                 }
                 else {
                     // invalid 
