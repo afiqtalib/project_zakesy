@@ -40,8 +40,6 @@ class Admin extends CI_Controller {
 	// }
     function login_validation ()
     {
-        // if(isset($_POST['login'])) {
-
             $this->form_validation->set_rules('email','Email','required');
             $this->form_validation->set_rules('password','Password','required');
             if ($this->form_validation->run() == TRUE) {
@@ -63,12 +61,12 @@ class Admin extends CI_Controller {
                 }
                 else {
                     // invalid 
-                    $this->session->set_flashdata('error', 'Sorry, Invalid email @ password');        
+                    // $this->session->set_flashdata('error', 'Sorry, Invalid email @ password');
+                    $this->session->set_flashdata('error', '');
 
-                    // $data['invalid'] = "";
-                    echo "<script type='text/javascript'>
-                                alert('Invalid BOSSS.');
-                            </script>"; 
+                    // echo "<script type='text/javascript'>
+                    //             alert('Invalid BOSSS.');
+                    //         </script>"; 
                     redirect("admin", "refresh");
                 }
             }

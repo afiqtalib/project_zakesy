@@ -13,18 +13,18 @@
 
     <link rel="stylesheet" href="<?php echo base_url('assets/css/bootstrap.min.css'); ?> ">
     <link rel="stylesheet" href="<?php echo base_url('assets/css/style.css'); ?> ">
+
+    <!-- SWEETALERT CDN -->
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 </head>
 
 
 <body class="bg-gradient-primary">
-
+    <!-- Start Container -->
     <div class="container">
-
-        <!-- Outer Row -->
+        <!-- START Outer Row -->
         <div class="row justify-content-center">
-
             <div class="col-xl-10 col-lg-12 col-md-9">
-
                 <div class="card o-hidden border-0 shadow-lg my-5">
                     <div class="card-body p-0">
                         <!-- Nested Row within Card Body -->
@@ -40,13 +40,26 @@
                                         <h1 class="h4 text-gray-900 mb-2">Hi Admin!</h1>
                                         <p class="mb-4">Login Your account now!</p>
                                     </div>
+                                    <!-- MESSAGE -->
                                     <div class="mb-4 text-center">
-                                    <?php   if (isset($_SESSION['success'])) { 
+                                    <?php   
+                                        if (isset($_SESSION['success'])) { 
                                             echo '<span class="alert alert-success alert-dismissible"><strong>BERJAYA!  </strong>login as ADMIN 
-                                            </span>'
+                                            </span>
+                                            <script>
+                                                swal("Good job!", "Your email & password is right!", "success");;
+                                            </script>'
                                             ; }
-                                        ?>
+                                        if (isset($_SESSION['error'])) { 
+                                            echo '<span class="alert alert-danger alert-dismissible"><strong>INVALID!!  </strong>Email @ Password
+                                            </span>
+                                            <script>
+                                                swal("Invalid!", "email @ password!", "error");;
+                                            </script>'
+                                            ; }
+                                    ?>
                                     </div>
+                                    <!-- START FORM -->
                                     <form class="user" method="post" action="<?php echo base_url(); ?>index.php/admin/login_validation">
                                         <div class="form-group mb-3">
                                             <input type="email" name="email" class="form-control form-control-user"
@@ -64,10 +77,9 @@
                                             Login
                                         </a> -->
                                         <button type="submit" class="btn btn-primary btn-user btn-block">LoGin</button>
-                                        <span class="text-danger" ><?php echo $this->session->set_flashdata("error");?></span>
-                                        <span class="text-danger"></span>
-                                        
+                                        <span class="text-danger" ><?php echo $this->session->set_flashdata("error");?></span>                                        
                                     </form>
+                                    <!-- END FORM -->
                                     <hr>
                                     <div class="text-center">
                                         <a class="small" href="<?php echo base_url().'index.php'?>">Back</a>
@@ -79,13 +91,21 @@
                         </div>
                     </div>
                 </div>
-
             </div>
-
         </div>
-
+        <!-- END Outer Row -->
     </div>
+    <!-- End Container -->
 
+    <!-- Start of Footer -->
+    <footer class="sticky-footer">
+        <div class="container">
+            <div class="copyright text-center text-light  fw-lighter mb-3">
+                <span>Copyright &copy; Zakesy Sdn. Bhd. (2023)</span>
+            </div>
+        </div>
+    </footer>
+    <!-- End of Footer -->
 
 </body>
 
