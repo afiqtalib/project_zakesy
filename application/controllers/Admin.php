@@ -8,6 +8,7 @@ class Admin extends CI_Controller {
 	{
 		parent::__construct();
 		date_default_timezone_set('Asia/Kuala_Lumpur');	
+        error_reporting(E_ERROR | E_PARSE);
 	}
 
     // function login_process()
@@ -73,11 +74,10 @@ class Admin extends CI_Controller {
         }
     }
 
-    public function home () {
-
+    public function home () 
+    {
         $data['email']=$this->session->userdata('email');
-
-        $this->load->view('admin_v_home');
+        $this->load->view('admin_v_home',$data);
     }
 
 

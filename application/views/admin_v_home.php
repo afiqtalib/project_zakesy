@@ -15,19 +15,7 @@
     <link rel="stylesheet" href="<?php echo base_url('assets/css/sb-admin-2.min.css'); ?>">
     <!-- FONT AWESOME version 6.2.1 -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet" type="text/css">
-    
-    <!-- TEST MASUK JS (SB-ADMIN) -->
-    <script type="text/javascript" src="<?php echo $base_url; ?>assets/js/main.js"></script>
-    <script type="text/javascript" src="<?php echo $base_url; ?>assets/js/sb-admin-2.js"></script>
-    <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/sb-admin-2.min.js"></script>
-
-    <!-- TEST MASUK JS 2 (SB-ADMIN) -->
-    <script type="text/javascript" src="<?php echo $base_url; ?>assets/js/bootstrap.min2.js"></script>
-    
-    <!-- JS BS 5 - ORIGINAL -->
-    <script type="text/javascript" src="<?php echo $base_url; ?>assets/js/bootstrap.min.js"></script>
-    <script type="text/javascript" src="<?php echo $base_url; ?>assets/js/bootstrap.bundle.min.js"></script>
-    <!--  -->
+    <!-- IMPORT JQUERY  -->
     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 </head>
 
@@ -331,7 +319,7 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Nama User</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">nama <?php echo $email;?></span>
                                 <img src="<?php echo base_url('assets/image/admin.jpg')?>" class="img-thumbnail img-profile rounded-circle" alt="">
                                 <!-- <img class="img-profile rounded-circle"
                                     src="img/undraw_profile.svg"> -->
@@ -641,40 +629,22 @@
         </div>
     </div>
 
-    <!-- JS - SB-ADMIN -->
+    <!-- JS FROM - (SB-ADMIN) -->
+    <script src="<?php echo base_url(); ?>assets/js/main.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/sb-admin-2.js"></script>
+    <script src="<?php echo base_url(); ?>assets/js/sb-admin-2.min.js"></script>
+
+    <!-- TEST MASUK JS 2 (SB-ADMIN) -->
+    <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/bootstrap.min2.js"></script>
     <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/bootstrap.bundle.min2.js"></script>
-    <!-- <script type="text/javascript" src="<?php echo base_url(); ?> assets/js/jquery.min.js"></script> -->
+    <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/jquery.min.js"></script>
+    
+    <!-- JS BS 5 - ORIGINAL -->
+    <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- IMORT JQUERY -->
+    <!-- <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script> -->
 </body>
 
 </html>
-
-<script>
-    /* ============ SWITCH TABLE - TAB ============== */
-    function openTab(evt, tabName) 
-    {
-        var i, tabcontent, tablinks;
-        tabcontent = document.getElementsByClassName("tabcontent");
-        
-        for (i = 0; i < tabcontent.length; i++) 
-        {
-            tabcontent[i].style.display = "none";
-        }
-
-        tablinks = document.getElementsByClassName("tablinks");
-
-        for (i = 0; i < tablinks.length; i++) 
-        {
-            tablinks[i].className = tablinks[i].className.replace(" active", "");
-        }
-        
-        document.getElementById(tabName).style.display = "table";
-        evt.currentTarget.className += " active";
-    }
-
-    /* ============ TITLE TOOLTIP TOOGLE ============== */
-	
-    $(function () 
-    {
-        $('[data-toggle="tooltip"]').tooltip();
-    });
-</script>
