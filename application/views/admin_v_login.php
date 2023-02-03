@@ -60,23 +60,26 @@
                                     ?>
                                     </div>
                                     <!-- START FORM -->
-                                    <form class="user" method="post" action="<?php echo base_url(); ?>index.php/admin/login_validation">
+                                    <form class="user" method="post" action="<?php echo base_url(); ?>index.php/admin/login">
                                         <div class="form-group mb-3">
-                                            <input type="email" name="email" class="form-control form-control-user"
-                                                aria-describedby="emailHelp"
-                                                placeholder="Enter Your Email...">
-                                            <span class="text-danger" ><?php echo form_error('email');?></span>
+                                            <div class="input-group input-group-lg">
+                                                <input type="email" name="email" class="form-control form-control-user"
+                                                    aria-describedby="emailHelp"
+                                                    placeholder="Enter Your Email...">
+                                            </div>
+                                            <span class="text-danger form-text" ><?php echo form_error('email');?></span>
                                         </div>
                                         <div class="form-group mb-3">
                                             <input type="password" name="password" class="form-control form-control-user"
                                                 aria-describedby="emailHelp"
                                                 placeholder="Enter Password..." aria-required="true">
-                                            <span class="text-danger" ><?php echo form_error('password');?></span>
+                                            <span class="text-danger form-text"><?php echo form_error('password');?></span>
                                         </div>
                                         <!-- <a  type="submit" name="login" class="btn btn-primary btn-user btn-block">
                                             Login
                                         </a> -->
                                         <button type="submit" class="btn btn-primary btn-user btn-block">LoGin</button>
+                                        <!-- TAK JADI -->
                                         <span class="text-danger" ><?php echo $this->session->set_flashdata("error");?></span>                                        
                                     </form>
                                     <!-- END FORM -->
@@ -100,7 +103,7 @@
     <!-- Start of Footer -->
     <footer class="sticky-footer">
         <div class="container">
-            <div class="copyright text-center text-light  fw-lighter mb-3">
+            <div class="copyright text-center text-primary  fw-lighter mb-3">
                 <span>Copyright &copy; Zakesy Sdn. Bhd. (2023)</span>
             </div>
         </div>

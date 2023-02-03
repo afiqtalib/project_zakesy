@@ -38,47 +38,50 @@ class Admin extends CI_Controller {
     //     }
 	// 	redirect('admin');
 	// }
-    function login_validation ()
+    function login ()
     {
-            $this->form_validation->set_rules('email','Email','required');
-            $this->form_validation->set_rules('password','Password','required');
-            if ($this->form_validation->run() == TRUE) {
-                //true 
-                $email=$this->input->post('email');
-                $password=$this->input->post('password');
+        $this->form_validation->set_rules('email','Email','required');
+        $this->form_validation->set_rules('password','Password','required');
+        if ($this->form_validation->run() == TRUE) {
+            //true 
+            $email=$this->input->post('email');
+            $password=$this->input->post('password');
 
-                $query=$this->M_query->can_login($email,$password);
-                if ($query==TRUE) {
-                    $session_data = array(
-                                            'email' 	=> $email,
-                                            'password' 	=> $password
-                                        );
-                    $this->session->set_userdata($session_data);
-                    $this->session->set_flashdata("success", "");
-                    $this->load->view('admin_v_home');
+            $query=$this->M_query->can_login($email,$password);
+            if ($query==TRUE) {
+                $session_data = array(
+                                        'email' 	=> $email,
+                                        'password' 	=> $password
+                                    );
+                $this->session->set_userdata($session_data);
+                $this->session->set_flashdata("success", "");
 
-                    // echo "<script type='text/javascript'>alert('Successfuly BOSSS.');</script>"; 
-                    // redirect("admin", "refresh");
-                }
-                else {
-                    // invalid 
-                    // $this->session->set_flashdata('error', 'Sorry, Invalid email @ password');
-                    $this->session->set_flashdata('error', '');
-
-                    // echo "<script type='text/javascript'>
-                    //             alert('Invalid BOSSS.');
-                    //         </script>"; 
-                    redirect("admin", "refresh");
-                }
+                redirect("admin/home", "refresh");
+                // echo "<script type='text/javascript'>alert('Successfuly BOSSS.');</script>"; 
+                // redirect("admin", "refresh");
             }
-            else { 
-                // false
-                $this->load->view('admin_v_login');
+            else {
+                // invalid 
+                $this->session->set_flashdata('error', '');
+                // echo "<script type='text/javascript'>alert('Invalid BOSSS.');</script>"; 
+                redirect("admin", "refresh");
             }
-    
+        }
+        else { 
+            // false
+            $this->load->view('admin_v_login');
+        }
     }
 
-    function login ()
+    public function home () {
+
+        $data['email']=$this->session->userdata('email');
+
+        $this->load->view('admin_v_home');
+    }
+
+
+    function loginnnn ()
         {
             $this->form_validation->set_rules('email','Email','required');
             $this->form_validation->set_rules('password','Password','required');
