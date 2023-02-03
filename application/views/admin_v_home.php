@@ -6,23 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Admin - Home</title>
     <link rel="website icon" type="png" href="<?php echo base_url('assets/image/zakesy.png')?>">
-
+    
+    <!-- BOOTSTRAP & CSS  -->
     <link rel="stylesheet" href="<?php echo base_url('assets/css/bootstrap.min.css'); ?>">
-    <!-- TEST MASUK BS -SB ADMIN -->
-    <!-- <link rel="stylesheet" href="<?php echo base_url('assets/css/sb-admin-2.css'); ?>"> -->
-    <!-- <link rel="stylesheet" href="<?php echo base_url('assets/css/sb-admin-2.min.css'); ?>"> -->
-
     <link rel="stylesheet" href="<?php echo base_url('assets/css/style.css'); ?>">
+    <!-- TEST MASUK BS -SB ADMIN -->
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/sb-admin-2.css'); ?>">
+    <!-- <link rel="stylesheet" href="<?php echo base_url('assets/css/sb-admin-2.min.css'); ?>"> -->
     <!-- FONT AWESOME version 6.2.1 -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet" type="text/css">
     
     <!-- TEST MASUK JS (SB-ADMIN) -->
     <script type="text/javascript" src="<?php echo $base_url; ?>assets/js/main.js"></script>
     <script type="text/javascript" src="<?php echo $base_url; ?>assets/js/sb-admin-2.js"></script>
-    <script type="text/javascript" src="<?php echo $base_url; ?>assets/js/sb-admin-2.min.js"></script>
+    <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/sb-admin-2.min.js"></script>
 
+    <!-- TEST MASUK JS 2 (SB-ADMIN) -->
+    <script type="text/javascript" src="<?php echo $base_url; ?>assets/js/bootstrap.min2.js"></script>
+    
+    <!-- JS BS 5 - ORIGINAL -->
     <script type="text/javascript" src="<?php echo $base_url; ?>assets/js/bootstrap.min.js"></script>
     <script type="text/javascript" src="<?php echo $base_url; ?>assets/js/bootstrap.bundle.min.js"></script>
+    <!--  -->
+    <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
 </head>
 
 <body id="page-top">
@@ -74,12 +80,14 @@
 
             <!-- Nav Item - Utilities Collapse Menu -->
             <li class="nav-item active">
-                <a class="nav-link" href="#" data-toggle="collapse" data-target="#collapseUtilities"
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
                     aria-expanded="true" aria-controls="collapseUtilities">
                     <i class="fas fa-fw fa-wrench"></i>
                     <span>Utilities</span>
                 </a>
-                <div id="collapseUtilities" class="collapse show" aria-labelledby="headingUtilities"
+                <!-- <div id="collapseUtilities" class="collapse show" aria-labelledby="headingUtilities" -->
+
+                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header">Custom Utilities:</h6>
@@ -632,7 +640,9 @@
         </div>
     </div>
 
-
+    <!-- JS - SB-ADMIN -->
+    <script type="text/javascript" src="<?php echo base_url(); ?>assets/js/bootstrap.bundle.min2.js"></script>
+    <!-- <script type="text/javascript" src="<?php echo base_url(); ?> assets/js/jquery.min.js"></script> -->
 </body>
 
 </html>
@@ -666,5 +676,4 @@
     {
         $('[data-toggle="tooltip"]').tooltip();
     });
-
 </script>
