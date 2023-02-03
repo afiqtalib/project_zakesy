@@ -12,7 +12,7 @@
     <link rel="stylesheet" href="<?php echo base_url('assets/css/style.css'); ?>">
     <!-- TEST MASUK BS -SB ADMIN -->
     <link rel="stylesheet" href="<?php echo base_url('assets/css/sb-admin-2.css'); ?>">
-    <!-- <link rel="stylesheet" href="<?php echo base_url('assets/css/sb-admin-2.min.css'); ?>"> -->
+    <link rel="stylesheet" href="<?php echo base_url('assets/css/sb-admin-2.min.css'); ?>">
     <!-- FONT AWESOME version 6.2.1 -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet" type="text/css">
     

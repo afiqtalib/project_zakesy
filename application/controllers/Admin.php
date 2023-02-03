@@ -54,9 +54,9 @@ class Admin extends CI_Controller {
                                         'password' 	=> $password
                                     );
                 $this->session->set_userdata($session_data);
-                $this->session->set_flashdata("success", "");
+                // $this->session->set_flashdata("success", "");
 
-                redirect("admin/home", "refresh");
+                redirect('admin/home');
                 // echo "<script type='text/javascript'>alert('Successfuly BOSSS.');</script>"; 
                 // redirect("admin", "refresh");
             }
