@@ -1127,9 +1127,13 @@ function get_user_pass($email,$password)
 	    
 	  
 	}
+
+    /*---------------------------------
+    //     MODEL YANG GUNA SEKARANG    //
+    -----------------------------------*/
     function can_login($email,$password)
 	{
-	    $this->db->where('email', $email);  
+        $this->db->where('email', $email);  
         $this->db->where('password', $password);  
         $query = $this->db->get('admin');  
         //SELECT * FROM users WHERE username = '$username' AND password = '$password'  
@@ -1141,6 +1145,14 @@ function get_user_pass($email,$password)
         {  
             return false;       
         }  
+	}
+
+    function specific_row($arraycolumn, $table) //test 
+	{
+        //SELECT * FROM users WHERE username = '$username' AND password = '$password'  
+        $this->db->get_where($table, $arraycolumn);
+        $query = $this->db->get($table);
+        return $query->row_array(); 
 	}
 
 }

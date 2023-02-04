@@ -70,9 +70,11 @@
                                             <span class="text-danger form-text" ><?php echo form_error('email');?></span>
                                         </div>
                                         <div class="form-group mb-3">
-                                            <input type="password" name="password" class="form-control form-control-user"
-                                                aria-describedby="emailHelp"
-                                                placeholder="Enter Password..." aria-required="true">
+                                            <div class="input-group input-group-lg">
+                                                <input type="password" name="password" class="form-control form-control-user"
+                                                    aria-describedby="emailHelp"
+                                                    placeholder="Enter Password..." aria-required="true">
+                                            </div>
                                             <span class="text-danger form-text"><?php echo form_error('password');?></span>
                                         </div>
                                         <!-- <a  type="submit" name="login" class="btn btn-primary btn-user btn-block">
