@@ -20,7 +20,7 @@ class Admin extends CI_Controller {
     {
         // CALL SESSION
         $data['email']=$this->session->userdata('email');
-        echo $this->session->userdata();
+        // echo $this->session->userdata();
         $data['nama']=$this->session->userdata('admin_name');
         echo "<pre>";
             print_r($this->session->userdata());
