@@ -23,8 +23,7 @@ class Admin extends CI_Controller {
         if ($this->form_validation->run() == TRUE) {
             //true -- insert input 
             $email=$this->input->post('email');
-            $password=$this->input->post('password');
-    
+            $password=md5($this->input->post('password'));
             // check user in database 
             // $table     		= "admin";
 			// $arrayWhere 	= array(
@@ -69,10 +68,11 @@ class Admin extends CI_Controller {
     {
         // CALL SESSION
         $data['email']=$this->session->userdata('email');
-        $data['id']=$this->session->userdata('admin_id');
+        echo $this->session->userdata('admin_id');
         $data['nama']=$this->session->userdata('admin_name');
         echo "<pre>";
-            print_r($this->session->userdata);
+            print_r($this->session->userdata());
+            echo md5('12345');
         echo "</pre>";
         $this->load->view('admin_v_home',$data);
     }
