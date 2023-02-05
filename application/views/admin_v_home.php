@@ -319,7 +319,7 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $nama;?></span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $nama, $this->session->userdata['email'];?></span>
                                 <img src="<?php echo base_url('assets/image/admin.jpg')?>" class="img-thumbnail img-profile rounded-circle" alt="">
                                 <!-- <img class="img-profile rounded-circle"
                                     src="img/undraw_profile.svg"> -->
@@ -356,7 +356,7 @@
                 <div class="container-fluid">
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Dashboard - Hi Admin, <?php echo $id, $nama; ?></h1>  
+                        <h1 class="h3 mb-0 text-gray-800">Dashboard - Hi Admin, <?php echo $id, $nama, $this->session->userdata['email']; ?></h1>  
                         <a href="#"  class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
                             <i class="fas fa-download fa-sm text-white-50"></i>
                             Generate Report
