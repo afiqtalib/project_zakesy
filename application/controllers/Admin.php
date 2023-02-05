@@ -148,7 +148,8 @@ class Admin extends CI_Controller {
 	
     public function logout()
 	{       
-        unset($_SESSION['user_data']);        
-        redirect('admin');
+        unset ($_SESSION);
+        session_destroy();
+        redirect("admin","refresh");
 	}
 }
