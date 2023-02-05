@@ -46,7 +46,7 @@ class Admin_login extends CI_Controller {
             if ($query==TRUE) {
                 // set user session
                 $session_data = array(
-                                    'admin_id' 	=> '3',
+                                    'admin_id' 	=> $query['admin_id'],
                                     'email' 	=> $email,
                                     'password' 	=> $password,
                                     'logged_in' => TRUE
