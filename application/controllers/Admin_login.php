@@ -9,9 +9,6 @@ class Admin_login extends CI_Controller {
 		parent::__construct();
 		date_default_timezone_set('Asia/Kuala_Lumpur');	
         error_reporting(E_ERROR | E_PARSE);
-        if(!$this->session->userdata('email') == ''){
-			redirect('admin/home');
-		}
 	}
 
     public function index()
@@ -27,7 +24,7 @@ class Admin_login extends CI_Controller {
             //true -- insert input 
             $email=$this->input->post('email');
             $password=md5($this->input->post('password'));
-            
+
             // check user in database 
             // $table     		= "admin";
 			// $arrayWhere 	= array(
@@ -50,8 +47,16 @@ class Admin_login extends CI_Controller {
                 // set user session
                 $session_data = array(
                                     'email' 	=> $email,
-                                    'password' 	=> $password
+                                    'password' 	=> $password,
+                                    'logged_in' => TRUE
                                 );
+                //update table user (last_login)
+                $timestamp = date('Y-m-d H:i:s');
+                $table      = "admin";
+                $arrayData 	= array('last_login'=>  $timestamp);
+                $where		= array('email'	=> $email);
+                $this->M_query->update_data($arrayData,$table,$where);
+
                 $this->session->set_userdata($session_data);
                 redirect('admin/home');
             }
