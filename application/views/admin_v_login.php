@@ -11,6 +11,7 @@
     <title>Admin - Login</title>
     <link rel="website icon" type="png" href="<?php echo base_url('assets/image/zakesy.png')?>">
 
+    <!-- BOOTSTRAP V5 & CSS -->
     <link rel="stylesheet" href="<?php echo base_url('assets/css/bootstrap.min.css'); ?> ">
     <link rel="stylesheet" href="<?php echo base_url('assets/css/style.css'); ?> ">
 
@@ -60,7 +61,7 @@
                                     ?>
                                     </div>
                                     <!-- START FORM -->
-                                    <form class="user" method="post" action="<?php echo base_url(); ?>index.php/admin/login">
+                                    <form class="user" method="post" action="<?php echo base_url(); ?>index.php/admin_login/login">
                                         <div class="form-group mb-3">
                                             <div class="input-group input-group-lg">
                                                 <input type="email" name="email" class="form-control form-control-user"
