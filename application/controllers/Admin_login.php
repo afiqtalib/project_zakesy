@@ -46,6 +46,7 @@ class Admin_login extends CI_Controller {
             if ($query==TRUE) {
                 // set user session
                 $session_data = array(
+                                    'admin_id' 	=> '3',
                                     'email' 	=> $email,
                                     'password' 	=> $password,
                                     'logged_in' => TRUE
@@ -110,7 +111,6 @@ class Admin_login extends CI_Controller {
             }         
         }
         // $this->load->view ('login');
-        echo 'sgsgs';
     }
 
         // function login_process()

@@ -1137,7 +1137,7 @@ function get_user_pass($email,$password)
         $this->db->where('password', $password);  
         $query = $this->db->get('admin');  
         //SELECT * FROM users WHERE username = '$username' AND password = '$password'  
-        if($query->num_rows() > 0)  
+        if($query->row_array())  
         {  
             return true;  
         }  
