@@ -17,6 +17,10 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" rel="stylesheet" type="text/css">
     <!-- IMPORT JQUERY  -->
     <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script>
+
+    <!-- LINK DATA TABLE EXPORT -->
+    <link rel="stylesheet" href="https://cdn.datatables.net/1.13.2/css/jquery.dataTables.min.css"> 
+    <link rel="stylesheet" href="https://cdn.datatables.net/buttons/2.3.4/css/buttons.dataTables.min.css">
 </head>
 
 <body id="page-top">
@@ -488,19 +492,120 @@
                                                 Customer
                                             </th>
                                             <th>
-                                                Barber
-                                            </th>
-                                            <th>
                                                 Action
                                             </th>
                                         </tr>
                                     </thead>
                                     <tbody>
+                                        <tr>
+                                            <td>Tiger Nixon</td>
+                                            <td>System Architect</td>
+                                            <td>Edinburgh</td>
+                                            <td>61</td>
+                                            <td>2011/04/25</td>
+                                            <td>$320,800</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Garrett Winters</td>
+                                            <td>Accountant</td>
+                                            <td>Tokyo</td>
+                                            <td>63</td>
+                                            <td>2011/07/25</td>
+                                            <td>$170,750</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tiger Nixon</td>
+                                            <td>System Architect</td>
+                                            <td>Edinburgh</td>
+                                            <td>61</td>
+                                            <td>2011/04/25</td>
+                                            <td>$320,800</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Garrett Winters</td>
+                                            <td>Accountant</td>
+                                            <td>Tokyo</td>
+                                            <td>63</td>
+                                            <td>2011/07/25</td>
+                                            <td>$170,750</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Tiger Nixon</td>
+                                            <td>System Architect</td>
+                                            <td>Edinburgh</td>
+                                            <td>61</td>
+                                            <td>2011/04/25</td>
+                                            <td>$320,800</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Garrett Winters</td>
+                                            <td>Accountant</td>
+                                            <td>Tokyo</td>
+                                            <td>63</td>
+                                            <td>2011/07/25</td>
+                                            <td>$170,750</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Ashton Cox</td>
+                                            <td>Junior Technical Author</td>
+                                            <td>San Francisco</td>
+                                            <td>66</td>
+                                            <td>2009/01/12</td>
+                                            <td>$86,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Cedric Kelly</td>
+                                            <td>Senior Javascript Developer</td>
+                                            <td>Edinburgh</td>
+                                            <td>22</td>
+                                            <td>2012/03/29</td>
+                                            <td>$433,060</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Quinn Flynn</td>
+                                            <td>Support Lead</td>
+                                            <td>Edinburgh</td>
+                                            <td>22</td>
+                                            <td>2013/03/03</td>
+                                            <td>$342,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Yuri Berry</td>
+                                            <td>Chief Marketing Officer (CMO)</td>
+                                            <td>New York</td>
+                                            <td>40</td>
+                                            <td>2009/06/25</td>
+                                            <td>$675,000</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Caesar Vance</td>
+                                            <td>Pre-Sales Support</td>
+                                            <td>New York</td>
+                                            <td>21</td>
+                                            <td>2011/12/12</td>
+                                            <td>$106,450</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Doris Wilder</td>
+                                            <td>Sales Assistant</td>
+                                            <td>Sidney</td>
+                                            <td>23</td>
+                                            <td>2010/09/20</td>
+                                            <td>$85,600</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Olivia Liang</td>
+                                            <td>Support Engineer</td>
+                                            <td>Singapore</td>
+                                            <td>64</td>
+                                            <td>2011/02/03</td>
+                                            <td>$234,500</td>
+                                        </tr>
                                     </tbody>
                                 </table>
 
                                 <!-- COMPLETED -->                
-                                <table class="table table-bordered tabcontent" id="completed" style="display:table" width="100%" cellspacing="0">
+                                <table class="table table-bordered tabcontent" id="completed" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
                                             <th>
@@ -520,7 +625,7 @@
                                 </table>
 
                                 <!-- PENDING  -->                
-                                <table class="table table-bordered tabcontent" id="pending" style="display:table" width="100%" cellspacing="0">
+                                <table class="table table-bordered tabcontent" id="pending" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
                                             <th>
@@ -540,7 +645,7 @@
                                 </table>
 
                                 <!-- UNPAID  -->                
-                                <table class="table table-bordered tabcontent" id="unpaid" style="display:table" width="100%" cellspacing="0">
+                                <table class="table table-bordered tabcontent" id="unpaid" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
                                             <th>
@@ -560,7 +665,7 @@
                                 </table>
 
                                 <!-- CANCELLED  -->                
-                                <table class="table table-bordered tabcontent" id="cancelled" style="display:table" width="100%" cellspacing="0">
+                                <table class="table table-bordered tabcontent" id="cancelled" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
                                             <th>
@@ -585,6 +690,85 @@
                         </div>
                     </div>
                     <!-- END CARD Tables -->
+                    
+                    <!-- NEW CARD -->
+                    <div class="card shadow mb-4 border-0">
+                        <div class="card-header text-light bg-primary h3 font-weight-bold">
+                            TITTLE
+                        </div>
+                        <div class="card-body">
+                            <!-- <h5 class="card-title">Card title</h5> -->
+                            <!-- START NEW DISPLAY -->
+                            <div class="row">
+                                <div class="col-xl-4 col-md-6 mb-4 text-justify">
+                                    <h1 class="h3 mb-3 text-dark font-weight-bold">Letak Tajuk</h1>  
+                                        Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet fermentum. Donec sed odio operae, eu vulputate felis rhoncus. Praeterea iter est quasdam res quas ex communi. At nos hinc posthac, sitientis piros Afrosibi concili C
+                                </div>
+                                <div class="col-xl-8 col-md-6 mb-4">
+                                    <div class="table-responsive">
+                                        <!-- ALL  -->                
+                                        <table class="table table-bordered tabcontent active" style="display:table" width="100%" cellspacing="0">
+                                            <thead>
+                                                <tr>
+                                                    <th>#Book ID</th>
+                                                    <th>Booked Date</th>
+                                                    <th> Booked Services</th>
+                                                    <th>Action</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Caesar Vance</td>
+                                                    <td>Pre-Sales Support</td>
+                                                    <td>New York</td>
+                                                    <td>21</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Doris Wilder</td>
+                                                    <td>Sales Assistant</td>
+                                                    <td>Sidney</td>
+                                                    <td>23</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Olivia Liang</td>
+                                                    <td>Support Engineer</td>
+                                                    <td>Singapore</td>
+                                                    <td>64</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- START NEW DISPLAY -->
+                            <div class="mt-4">
+                                <div class="row">
+                                    <div class="col-xl-1">
+                                        <i class="fa-solid fa-apple-whole fa-5x"></i>
+                                    </div>
+                                    <div class="col-xl-3">
+                                        <div class="h3"><span class="badge text-bg-danger">
+                                            <i class="fa-solid fa-thumbs-down pr-2"></i>Higher needs</span>
+                                        </div>
+                                        <div class="h3"><span class="badge text-light bg-warning">
+                                            <i class="fa-solid fa-thumbs-up pr-2"></i>Normal</span>
+                                        </div>
+                                        <div class="h3"><span class="badge text-bg-success">
+                                            <i class="fa-solid fa-thumbs-up pr-2"></i>Lower needs</span>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-8">
+                                        <div class="progress"  style="height: 25px;">
+                                            <div class="progress-bar bg-danger" role="progressbar" style="width: 33.33%" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100"></div>
+                                            <div class="progress-bar bg-warning" role="progressbar" style="width: 33.33%" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100"></div>
+                                            <div class="progress-bar bg-success" role="progressbar" style="width: 33.33%" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- NEW CARD -->
                 </div>
 
             </div>
@@ -646,11 +830,24 @@
     
     <!-- IMORT JQUERY -->
     <!-- <script src="http://code.jquery.com/jquery-1.9.1.min.js"></script> -->
+    <!-- JS DATATABLE -->
+    <script type="text/javascript" src="https://cdn.datatables.net/1.13.2/js/jquery.dataTables.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/2.3.4/js/dataTables.buttons.min.js"></script>
+    <script type="text/javascript" src="https://cdn.datatables.net/buttons/2.3.4/js/buttons.html5.min.js"></script>
 </body>
 
 </html>
 
 <script>
+    $(document).ready(function() {
+        $('#all').DataTable( {
+            dom: 'Bfrtip',
+            buttons: [
+                'copy', 'csv', 'excel', 'pdf', 'print'
+            ]
+        } );
+    } );
+
     (function($) {
         "use strict"; // Start of use strict
 
