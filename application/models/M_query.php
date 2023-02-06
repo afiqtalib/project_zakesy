@@ -1133,25 +1133,25 @@ function get_user_pass($email,$password)
     -----------------------------------*/
     function can_login($email,$password)
 	{
+        $this->db->select('*');  
+        $this->db->from('admin');  
         $this->db->where('email', $email);  
         $this->db->where('password', $password);  
-        $query = $this->db->get('admin');  
+        $query = $this->db->get();  
         //SELECT * FROM users WHERE username = '$username' AND password = '$password'  
-        if($query->row_array())  
-        {  
-            return true;  
-        }  
-        else  
-        {  
-            return false;       
-        }  
+        return $query->row_array(); 
 	}
 
-    function specific_row($arraycolumn, $table) //test 
+    function specific_row($table, $where) //test 
 	{
         //SELECT * FROM users WHERE username = '$username' AND password = '$password'  
-        $this->db->get_where($table, $arraycolumn);
-        $query = $this->db->get($table);
+        $this->db->select('*');  
+        $this->db->from($table);  
+        if($where!=false){
+        	$this->db->where($where);
+        } 
+        $query = $this->db->get();  
+        //SELECT * FROM users WHERE username = '$username' AND password = '$password'  
         return $query->row_array(); 
 	}
 

@@ -26,12 +26,12 @@ class Admin_login extends CI_Controller {
             $password=md5($this->input->post('password'));
 
             // check user in database 
-            // $table     		= "admin";
-			// $arrayWhere 	= array(
+            // $table  = "admin";
+			// $where 	= array(
             //                     'email'=>$email,
             //                     'password'=>$password
 			// 				);
-            // $query=$this->M_query->specific_row($arrayWhere, $table);
+            // $query=$this->M_query->specific_row($table, $where);
             // if(!empty($query)) {
             //     // set user session 
             //     $session_data = array(
@@ -45,8 +45,9 @@ class Admin_login extends CI_Controller {
             $query=$this->M_query->can_login($email,$password);
             if ($query==TRUE) {
                 // set user session
-                $session_data = array(
+                $session_data = array(     
                                     'admin_id' 	=> $query['admin_id'],
+                                    'admin_name'=> $query['admin_name'],
                                     'email' 	=> $email,
                                     'password' 	=> $password,
                                     'logged_in' => TRUE
@@ -55,7 +56,7 @@ class Admin_login extends CI_Controller {
                 $timestamp = date('Y-m-d H:i:s');
                 $table      = "admin";
                 $arrayData 	= array('last_login'=>  $timestamp);
-                $where		= array('email'	=> $email);
+                $where		= array('admin_id'	=> $query['admin_id']);
                 $this->M_query->update_data($arrayData,$table,$where);
 
                 $this->session->set_userdata($session_data);

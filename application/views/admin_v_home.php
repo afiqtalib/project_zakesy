@@ -446,6 +446,7 @@
                         </div>
                     </div>
                     <?php echo $this->session->userdata['email'];?>
+                    <?php print_r($this->session->userdata)?>
                     <!-- CARD Tables -->
                     <div class="card shadow mb-4 border-0">
                         <div class="card-header tab rounded-top" style="padding: 0px !important;background: #674188 !important">
