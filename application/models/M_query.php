@@ -1151,7 +1151,6 @@ function get_user_pass($email,$password)
         	$this->db->where($where);
         } 
         $query = $this->db->get();  
-        //SELECT * FROM users WHERE username = '$username' AND password = '$password'  
         return $query->row_array(); 
 	}
 
