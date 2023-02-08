@@ -116,9 +116,9 @@
 
             <!-- Nav Item - Charts -->
             <li class="nav-item">
-                <a class="nav-link" href="<?php echo base_url()."index.php/admin/design"?>">
+                <a class="nav-link" href="charts.html">
                     <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Contoh Design</span></a>
+                    <span>Charts</span></a>
             </li>
 
             <!-- Divider -->
@@ -310,7 +310,7 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $nama, $this->session->userdata['email'];?></span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $this->session->userdata['admin_name'];?></span>
                                 <img src="<?php echo base_url('assets/image/admin.jpg')?>" class="img-thumbnail img-profile rounded-circle" alt="">
                                 <!-- <img class="img-profile rounded-circle"
                                     src="img/undraw_profile.svg"> -->
@@ -347,14 +347,14 @@
                 <div class="container-fluid">
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Dashboard - Hi Admin, <?php echo $id, $nama; ?></h1>  
+                        <h1 class="h3 mb-0 text-gray-800">Contoh design</h1>  
                         <a href="#"  class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
                             <i class="fas fa-download fa-sm text-white-50"></i>
                             Generate Report
                         </a>
                     </div>
                     <!-- Content Row -->
-                    <div class="row">
+                    <!-- <div class="row">
 
                         <div class="col-xl-3 col-md-6 mb-4">
                             <div class="card border-start border-0 border-5 border-primary shadow-lg h-100 py-2">
@@ -435,248 +435,169 @@
                                 </div>
                             </div>
                         </div>
-                    </div>
-                    <?php echo $this->session->userdata['email'];?>
-                    <?php print_r($this->session->userdata)?>
-                    <!-- CARD Tables -->
+                    </div> -->
+                    <!-- <?php echo $this->session->userdata['email'];?>
+                    <?php print_r($this->session->userdata)?> -->
+                    
+                    
+                    <!-- NEW CARD -->
                     <div class="card shadow mb-4 border-0">
-                        <div class="card-header tab rounded-top" style="padding: 0px !important;background: #674188 !important">
-                            <button class="tablinks active" onclick="openTab(event, 'all')">
-                                Table 1
-                            </button>
-                            <button class="tablinks" onclick="openTab(event, 'completed')">
-                                Table 2
-                            </button>
-                            <button class="tablinks" onclick="openTab(event, 'pending')">
-                                Table 3
-                            </button>
-                            <button class="tablinks" onclick="openTab(event, 'unpaid')">
-                                Table 4
-                            </button>
-                            <button class="tablinks" onclick="openTab(event, 'cancelled')">
-                                Table 5
-                            </button>
+                        <div class="card-header text-light bg-primary h3 font-weight-bold">
+                            Title 
                         </div>
                         <div class="card-body">
-                            <div class="table-responsive">
-                                <!-- ALL  -->                
-                                <table class="table table-bordered tabcontent active" id="all" style="display:table" width="100%" cellspacing="0">
-                                    <thead>
-                                        <tr>
-                                            <th>
-                                                #Book ID
-                                            </th>
-                                            <th>
-                                                Booked Date
-                                            </th>
-                                            <th>
-                                                Booked Services
-                                            </th>
-                                            <th>
-                                                Booked Time
-                                            </th>
-                                            <th>
-                                                Customer
-                                            </th>
-                                            <th>
-                                                Action
-                                            </th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                        <tr>
-                                            <td>Tiger Nixon</td>
-                                            <td>System Architect</td>
-                                            <td>Edinburgh</td>
-                                            <td>61</td>
-                                            <td>2011/04/25</td>
-                                            <td>$320,800</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Garrett Winters</td>
-                                            <td>Accountant</td>
-                                            <td>Tokyo</td>
-                                            <td>63</td>
-                                            <td>2011/07/25</td>
-                                            <td>$170,750</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Tiger Nixon</td>
-                                            <td>System Architect</td>
-                                            <td>Edinburgh</td>
-                                            <td>61</td>
-                                            <td>2011/04/25</td>
-                                            <td>$320,800</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Garrett Winters</td>
-                                            <td>Accountant</td>
-                                            <td>Tokyo</td>
-                                            <td>63</td>
-                                            <td>2011/07/25</td>
-                                            <td>$170,750</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Tiger Nixon</td>
-                                            <td>System Architect</td>
-                                            <td>Edinburgh</td>
-                                            <td>61</td>
-                                            <td>2011/04/25</td>
-                                            <td>$320,800</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Garrett Winters</td>
-                                            <td>Accountant</td>
-                                            <td>Tokyo</td>
-                                            <td>63</td>
-                                            <td>2011/07/25</td>
-                                            <td>$170,750</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Ashton Cox</td>
-                                            <td>Junior Technical Author</td>
-                                            <td>San Francisco</td>
-                                            <td>66</td>
-                                            <td>2009/01/12</td>
-                                            <td>$86,000</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Cedric Kelly</td>
-                                            <td>Senior Javascript Developer</td>
-                                            <td>Edinburgh</td>
-                                            <td>22</td>
-                                            <td>2012/03/29</td>
-                                            <td>$433,060</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Quinn Flynn</td>
-                                            <td>Support Lead</td>
-                                            <td>Edinburgh</td>
-                                            <td>22</td>
-                                            <td>2013/03/03</td>
-                                            <td>$342,000</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Yuri Berry</td>
-                                            <td>Chief Marketing Officer (CMO)</td>
-                                            <td>New York</td>
-                                            <td>40</td>
-                                            <td>2009/06/25</td>
-                                            <td>$675,000</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Caesar Vance</td>
-                                            <td>Pre-Sales Support</td>
-                                            <td>New York</td>
-                                            <td>21</td>
-                                            <td>2011/12/12</td>
-                                            <td>$106,450</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Doris Wilder</td>
-                                            <td>Sales Assistant</td>
-                                            <td>Sidney</td>
-                                            <td>23</td>
-                                            <td>2010/09/20</td>
-                                            <td>$85,600</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Olivia Liang</td>
-                                            <td>Support Engineer</td>
-                                            <td>Singapore</td>
-                                            <td>64</td>
-                                            <td>2011/02/03</td>
-                                            <td>$234,500</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
-
-                                <!-- COMPLETED -->                
-                                <table class="table table-bordered tabcontent" id="completed" width="100%" cellspacing="0">
-                                    <thead>
-                                        <tr>
-                                            <th>
-                                                #Book ID
-                                            </th>
-                                            
-                                            <th>
-                                                COMPLETED
-                                            </th>
-                                            <th>
-                                                Action
-                                            </th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                    </tbody>
-                                </table>
-
-                                <!-- PENDING  -->                
-                                <table class="table table-bordered tabcontent" id="pending" width="100%" cellspacing="0">
-                                    <thead>
-                                        <tr>
-                                            <th>
-                                                #Book ID
-                                            </th>
-                                            
-                                            <th>
-                                                PENDING
-                                            </th>
-                                            <th>
-                                                Action
-                                            </th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                    </tbody>
-                                </table>
-
-                                <!-- UNPAID  -->                
-                                <table class="table table-bordered tabcontent" id="unpaid" width="100%" cellspacing="0">
-                                    <thead>
-                                        <tr>
-                                            <th>
-                                                #Book ID
-                                            </th>
-                                            
-                                            <th>
-                                                UNPAID
-                                            </th>
-                                            <th>
-                                                Action
-                                            </th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                    </tbody>
-                                </table>
-
-                                <!-- CANCELLED  -->                
-                                <table class="table table-bordered tabcontent" id="cancelled" width="100%" cellspacing="0">
-                                    <thead>
-                                        <tr>
-                                            <th>
-                                                #Book ID
-                                            </th>
-                                            
-                                            <th>
-                                                Barber
-                                            </th>
-                                            <th>
-                                                ORDER CANCELLED
-                                            </th>
-                                            <th>
-                                                Action
-                                            </th>
-                                        </tr>
-                                    </thead>
-                                    <tbody>
-                                    </tbody>
-                                </table>
+                            <!-- <h5 class="card-title">Card title</h5> -->
+                            <!-- START NEW DISPLAY -->
+                            <div class="row">
+                                <div class="col-xl-4 col-md-6 mb-4 text-justify">
+                                    <h1 class="h3 mb-3 text-dark font-weight-bold">Sub Title</h1>  
+                                        Ambitioni dedisse scripsisse iudicaretur. Cras mattis iudicium purus sit amet fermentum. Donec sed odio operae, eu vulputate felis rhoncus. Praeterea iter est quasdam res quas ex communi. At nos hinc posthac, sitientis piros Afrosibi concili C
+                                </div>
+                                <div class="col-xl-8 col-md-6 mb-4">
+                                    <div class="table-responsive">
+                                        <!-- ALL  -->                
+                                        <table class="table table-bordered table-striped tabcontent active" style="display:table" width="100%" cellspacing="0">
+                                            <thead>
+                                                <tr>
+                                                    <th>Name</th>
+                                                    <th>Position</th>
+                                                    <th>Office</th>
+                                                    <th>Age</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                <tr>
+                                                    <td>Caesar Vance</td>
+                                                    <td>Pre-Sales Support</td>
+                                                    <td>New York</td>
+                                                    <td>21</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Doris Wilder</td>
+                                                    <td>Sales Assistant</td>
+                                                    <td>Sidney</td>
+                                                    <td>23</td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Olivia Liang</td>
+                                                    <td>Support Engineer</td>
+                                                    <td>Singapore</td>
+                                                    <td>64</td>
+                                                </tr>
+                                            </tbody>
+                                        </table>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- START NEW DISPLAY -->
+                            <div class="mt-4">
+                                <h1 class="h3 ml-4 mb-3 text-dark font-weight-bold">Summary</h1>  
+                                <div class="row">
+                                    <div class="col-xl-6 col-md-6 mb-4">
+                                        <div class="card border-start border-0 border-5 border-primary shadow-sm h-100 py-2">
+                                            <div class="card-body">
+                                                <div class="row no-gutters align-items-center">
+                                                    <div class="col mr-2">
+                                                        <div class="text-xl font-weight-bold text-dark text-uppercase mb-1">
+                                                            Vitamin A
+                                                        </div>
+                                                        <div class="mb-0 font-weight-bold text-gray-800">
+                                                            <span class="badge text-light bg-success">
+                                                            <i class="fa-solid fa-thumbs-up pr-2"></i>Higher needs</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <img src="<?php echo base_url('assets/image/oren.png')?>" alt="" width="100">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 col-md-6 mb-4">
+                                        <div class="card border-start border-0 border-5 border-primary shadow-sm h-100 py-2">
+                                            <div class="card-body">
+                                                <div class="row no-gutters align-items-center">
+                                                    <div class="col mr-2">
+                                                        <div class="text-xl font-weight-bold text-dark text-uppercase mb-1">
+                                                            Vitamin A
+                                                        </div>
+                                                        <div class="mb-0 font-weight-bold text-gray-800">
+                                                            <span class="badge text-light bg-success">
+                                                            <i class="fa-solid fa-thumbs-up pr-2"></i>Higher needs</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <img src="<?php echo base_url('assets/image/oren.png')?>" alt="" width="100">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 col-md-6 mb-4">
+                                        <div class="card border-start border-0 border-5 border-primary shadow-sm h-100 py-2">
+                                            <div class="card-body">
+                                                <div class="row no-gutters align-items-center">
+                                                    <div class="col mr-2">
+                                                        <div class="text-xl font-weight-bold text-dark text-uppercase mb-1">
+                                                            Vitamin A
+                                                        </div>
+                                                        <div class="mb-0 font-weight-bold text-gray-800">
+                                                            <span class="badge text-light bg-warning">
+                                                            <i class="fa-solid fa-thumbs-down pr-2"></i>Higher needs</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <img src="<?php echo base_url('assets/image/susu.png')?>" alt="" width="100">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="col-xl-6 col-md-6 mb-4">
+                                        <div class="card border-start border-0 border-5 border-primary shadow-sm h-100 py-2">
+                                            <div class="card-body">
+                                                <div class="row no-gutters align-items-center">
+                                                    <div class="col mr-2">
+                                                        <div class="text-xl font-weight-bold text-dark text-uppercase mb-1">
+                                                            Vitamin A
+                                                        </div>
+                                                        <div class="mb-0 font-weight-bold text-gray-800">
+                                                            
+                                                            <span class="badge text-bg-danger">
+                                                            <i class="fa-solid fa-thumbs-down pr-2"></i>Higher needs</span>
+                                                        </div>
+                                                    </div>
+                                                    <div class="col-auto">
+                                                        <img src="<?php echo base_url('assets/image/mushroom.png')?>" alt="" width="100">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!--  LIST BADGE -->
+                                    <div class="col-xl-6">
+                                        <div class="h5"><span class="badge text-bg-danger">
+                                            <i class="fa-solid fa-thumbs-down pr-2"></i>Higher needs</span>
+                                        </div>
+                                        <div class="h5"><span class="badge text-light bg-warning">
+                                            <i class="fa-solid fa-thumbs-up pr-2"></i>Normal</span>
+                                        </div>
+                                        <div class="h5"><span class="badge text-bg-success">
+                                            <i class="fa-solid fa-thumbs-up pr-2"></i>Lower needs</span>
+                                        </div>
+                                    </div>
+                                    <!-- <div class="col-xl-8">
+                                        <div class="progress"  style="height: 25px;">
+                                            <div class="progress-bar bg-danger" role="progressbar" style="width: 33.33%" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100"></div>
+                                            <div class="progress-bar bg-warning" role="progressbar" style="width: 33.33%" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100"></div>
+                                            <div class="progress-bar bg-success" role="progressbar" style="width: 33.33%" aria-valuenow="33" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
+                                    </div> -->
+                                </div>
                             </div>
                         </div>
                     </div>
-                    <!-- END CARD Tables -->
+                    <!-- NEW CARD -->
                 </div>
 
             </div>

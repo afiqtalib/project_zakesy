@@ -28,6 +28,11 @@ class Admin extends CI_Controller {
         echo "</pre>";
         $this->load->view('admin_v_home',$data);
     }
+
+    public function design()
+	{       
+		$this->load->view('admin_v_design');
+	}
 	
     public function logout()
 	{       
