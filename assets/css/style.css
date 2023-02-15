@@ -14,7 +14,8 @@ body {
 
 .bg-login {
     /* background: linear-gradient(300deg, rgba(49,121,231,1) 10%, rgba(49,121,231,1) 100%); */
-    background: #F0F8FF;
+    /* background: #F0F8FF; */
+    background: #1f9be2cb;
 }
 
 .register

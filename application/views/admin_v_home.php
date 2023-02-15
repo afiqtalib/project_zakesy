@@ -310,7 +310,7 @@
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $nama, $this->session->userdata['email'];?></span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small"><?php echo $nama;?></span>
                                 <img src="<?php echo base_url('assets/image/admin.jpg')?>" class="img-thumbnail img-profile rounded-circle" alt="">
                                 <!-- <img class="img-profile rounded-circle"
                                     src="img/undraw_profile.svg"> -->
@@ -347,7 +347,7 @@
                 <div class="container-fluid">
                     <!-- Page Heading -->
                     <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                        <h1 class="h3 mb-0 text-gray-800">Dashboard - Hi Admin, <?php echo $id, $nama; ?></h1>  
+                        <h1 class="h3 mb-0 text-gray-800">Dashboard - Hi Admin, <?php echo $nama; ?></h1>  
                         <a href="#"  class="d-none d-sm-inline-block btn btn-sm btn-primary shadow-sm">
                             <i class="fas fa-download fa-sm text-white-50"></i>
                             Generate Report
@@ -436,8 +436,8 @@
                             </div>
                         </div>
                     </div>
-                    <?php echo $this->session->userdata['email'];?>
-                    <?php print_r($this->session->userdata)?>
+                    <!-- <?php echo $this->session->userdata['email'];?>
+                    <?php print_r($this->session->userdata)?> -->
                     <!-- CARD Tables -->
                     <div class="card shadow mb-4 border-0">
                         <div class="card-header tab rounded-top" style="padding: 0px !important;background: #674188 !important">
@@ -464,19 +464,19 @@
                                     <thead>
                                         <tr>
                                             <th>
-                                                #Book ID
+                                                Name
                                             </th>
                                             <th>
-                                                Booked Date
+                                                Position
                                             </th>
                                             <th>
-                                                Booked Services
+                                                City
                                             </th>
                                             <th>
-                                                Booked Time
+                                                Age
                                             </th>
                                             <th>
-                                                Customer
+                                                Date
                                             </th>
                                             <th>
                                                 Action
@@ -490,7 +490,12 @@
                                             <td>Edinburgh</td>
                                             <td>61</td>
                                             <td>2011/04/25</td>
-                                            <td>$320,800</td>
+                                            <td>
+                                                <a href="#"  class="btn btn-sm btn-primary shadow-sm">
+                                                <i class="fas fa-edit fa-sm text-white-50"></i>
+                                                    Update
+                                                </a>
+                                            </td>
                                         </tr>
                                         <tr>
                                             <td>Garrett Winters</td>

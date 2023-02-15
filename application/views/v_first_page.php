@@ -77,7 +77,7 @@
                                         <div class="row">
                                             <div class="col-sm-4">
                                                 <div class="card shadow-lg p-2 mb-4 bg-body border-0 rounded">
-                                                    <img src="assets/image/doc.jpg" class="card-img-top" alt="...">
+                                                    <img src="assets/image/admin.jpg" class="card-img-top" alt="...">
                                                     
                                                     <div class="card-body text-center">
                                                         <h5 class="card-title ">Admin</h5>
@@ -97,7 +97,7 @@
                                             </div>
                                             <div class="col-sm-4">
                                                 <div class="card shadow p-2 mb-4 bg-body border-0 rounded">
-                                                    <img src="assets/image/doc.jpg" class="card-img-top img-fluid" alt="...">
+                                                    <img src="assets/image/patient.jpg" class="card-img-top img-fluid" alt="...">
 
                                                     <div class="card-body text-center">
                                                         <h5 class="card-title">Patient</h5>
@@ -129,7 +129,7 @@
     <!-- Footer -->
     <footer class="sticky-footer">
                 <div class="container my-auto">
-            <div class="copyright text-center text-light my-auto fw-lighter mb-3">
+            <div class="copyright text-center text-primary my-auto fw-lighter mb-3">
                 <span>Copyright &copy; Zakesy Sdn. Bhd. (2023)</span>
             </div>
         </div>
