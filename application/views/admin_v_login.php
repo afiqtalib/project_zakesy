@@ -106,7 +106,7 @@
     <!-- Start of Footer -->
     <footer class="sticky-footer">
         <div class="container">
-            <div class="copyright text-center text-primary  fw-lighter mb-3">
+            <div class="copyright text-center text-light fw-lighter mb-3">
                 <span>Copyright &copy; Zakesy Sdn. Bhd. (2023)</span>
             </div>
         </div>
