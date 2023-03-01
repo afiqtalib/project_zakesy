@@ -42,7 +42,7 @@ class Admin_login extends CI_Controller {
             //     $this->session->set_userdata($session_data);
             //     redirect('admin/home');
             // }
-            $query=$this->M_query->can_login($email,$password);
+            $query=$this->m_query->can_login($email,$password);
             if ($query==TRUE) {
                 // set user session
                 $session_data = array(     
@@ -57,7 +57,7 @@ class Admin_login extends CI_Controller {
                 $table      = "admin";
                 $arrayData 	= array('last_login'=>  $timestamp);
                 $where		= array('admin_id'	=> $query['admin_id']);
-                $this->M_query->update_data($arrayData,$table,$where);
+                $this->m_query->update_data($arrayData,$table,$where);
 
                 $this->session->set_userdata($session_data);
                 redirect('admin/home');

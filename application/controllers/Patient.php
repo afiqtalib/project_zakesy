@@ -2,7 +2,7 @@
 if ( ! defined('BASEPATH')) exit('No direct script access allowed');
 // defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Admin extends CI_Controller {
+class Patient extends CI_Controller {
     
     public function __construct()
 	{
@@ -24,7 +24,6 @@ class Admin extends CI_Controller {
         // CALL SESSION
         $data['email']=$this->session->userdata('email');
         $data['nama']=$this->session->userdata('admin_name');
-
         $data['title']='Admin | Title'; // title tab
         // echo "<pre>";
         //     print_r($this->session->userdata());
@@ -33,27 +32,9 @@ class Admin extends CI_Controller {
         $this->load->view('admin_v_home',$data);
     }
 
-    public function list_patient()
+    public function list()
 	{       
-        $data['nama']=$this->session->userdata('admin_name');
-        $data['title']='Admin | List Patient'; // title tab
-
-        //get list team_sales
-    	$table 			   = 'cuti';
-        $data['list'] = $this->m_query->get_all_rows($table);
-
-		$this->load->view('patient_v_list', $data);
-	}
-
-    public function design()
-	{       
-		$this->load->view('admin_v_design');
+		$this->load->view('patient_v_list');
 	}
 	
-    public function logout()
-	{       
-        unset ($_SESSION);
-        session_destroy();
-        redirect("admin","refresh");
-	}
 }
