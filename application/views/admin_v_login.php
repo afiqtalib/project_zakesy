@@ -81,7 +81,7 @@
                                         <!-- <a  type="submit" name="login" class="btn btn-primary btn-user btn-block">
                                             Login
                                         </a> -->
-                                        <button type="submit" class="btn btn-primary btn-user btn-block">LoGin</button>
+                                        <button type="submit" class="btn btn-primary btn-user btn-block">LOGIN</button>
                                         <!-- TAK JADI -->
                                         <span class="text-danger" ><?php echo $this->session->set_flashdata("error");?></span>                                        
                                     </form>
@@ -106,7 +106,7 @@
     <!-- Start of Footer -->
     <footer class="sticky-footer">
         <div class="container">
-            <div class="copyright text-center text-light fw-lighter mb-3">
+            <div class="copyright text-center text-dark fw-lighter mb-3">
                 <span>Copyright &copy; Zakesy Sdn. Bhd. (2023)</span>
             </div>
         </div>

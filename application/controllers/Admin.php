@@ -9,6 +9,9 @@ class Admin extends CI_Controller {
 		parent::__construct();
 		date_default_timezone_set('Asia/Kuala_Lumpur');	
         error_reporting(E_ERROR | E_PARSE);
+        if($this->session->userdata('admin_id') == ''){
+			redirect('admin_login');
+		}
 	}
 
     public function index()
@@ -20,8 +23,8 @@ class Admin extends CI_Controller {
     {
         // CALL SESSION
         $data['email']=$this->session->userdata('email');
-        // echo $this->session->userdata();
         $data['nama']=$this->session->userdata('admin_name');
+        $data['title']='Admin | Title'; // title tab
         echo "<pre>";
             print_r($this->session->userdata());
             echo md5('12345');
