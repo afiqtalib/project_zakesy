@@ -14,6 +14,7 @@ class Patient extends CI_Controller {
 		}
 	}
 
+    // first view page
     public function index()
 	{       
 		$this->load->view('admin_v_login');
